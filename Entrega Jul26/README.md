@@ -1,7 +1,7 @@
 # Validación de asimetría operativa en el SADI a través de un semáforo de riesgo predictivo
 
 Trabajo Final Integrador — Especialización en Ciencia de Datos, ITBA (1.er cuatrimestre 2026).
-Autora: Ariana España Cotrone. Profesora: Alicia Laura Mon.
+Autora: Ariana España Cotrone. Tutora: Dra. Andrea A. Rey.
 
 ## Contenido
 
