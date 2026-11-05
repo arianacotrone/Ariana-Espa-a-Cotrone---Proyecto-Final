@@ -1,0 +1,295 @@
+% ******************************* PhD Thesis Template **************************
+% Please have a look at the README.md file for info on how to use the template
+
+\PassOptionsToPackage{style=apa, backend=biber}{biblatex}
+
+\documentclass[a4paper, 12pt, print, index, oneside, times, custombib]{PhDThesisPSnPDF}
+
+
+%\defbibenvironment{bibliography}
+%{\list
+	%	{}
+	%	{\setlength{\leftmargin}{\bibhang}%
+		%		\setlength{\itemindent}{-\leftmargin}%
+		%		\setlength{\itemsep}{\bibitemsep}%
+		%		\setlength{\parsep}{\bibparsep}}}
+%{\endlist}
+%{\item}
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{Referencias.bib}
+
+
+% Definición de encabezamientos y pié de página
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\lhead[\smaller Nombre]{\smaller Nombre}
+
+\fancyhead[R]{\smaller Título}
+
+\fancyfoot[CE, CO]{\thepage}
+
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[none]{hyphenat}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{array}       % mejor control de columnas
+\usepackage{geometry}    % márgenes
+\usepackage{float}
+\usepackage{subcaption} %recortar palabras y que entren en los margenes
+\usepackage[spanish]{babel}
+\usepackage{microtype}
+\usepackage{hyphenat}
+\sloppy
+\emergencystretch=2em
+\usepackage{needspace}
+
+
+%********************************
+\usepackage{babel}
+\addto\captionsspanish{
+  \renewcommand{\listtablename}{Índice de tablas}
+  \renewcommand{\tablename}{Tabla}
+}
+\renewcaptionname{spanish}{\tablename}{Tabla}
+
+\title{Título}
+
+%% Subtitle (Optional)
+
+%\subtitle{Subtítulo}
+%\else
+%\subtitle{Using the ULL template}
+%\fi
+
+%% The full name of the author
+\author{Nombre y Apellido}
+%\date{}
+
+%% Department (eg. Department of Engineering, Maths, Physics)
+
+\dept{Departamento de Sistemas Digitales y Datos}
+
+
+%% University and Crest
+
+\university{Instituto Tecnológico de Buenos Aires}
+
+\crest{\includegraphics[width=0.5\textwidth]{derf__64049_1952016_LOGOITBA.jpg}}
+
+
+
+
+
+%% Supervisor (optional)
+%% for multiple supervisors, append each supervisor with the \newline command
+\supervisor{Tutor/a}
+
+
+
+
+\degreetitle{Master en Ciencias de Datos}
+
+
+
+
+\ifdefineAbstract
+\includeonly{Abstract/abstract} 
+
+
+
+\fi
+% ***************************** Chapter Mode ***********************************
+% The chapter mode allows user to only print particular chapters with references
+% Title, Contents, Frontmatter are disabled by default
+% Useful option to review a particular chapter or to send it to supervisior.
+% To use choose `chapter' option in the document class
+
+\ifdefineChapter
+%\includeonly{Chapter3/chapter3}
+\fi
+
+% ******************************** Front Matter ********************************
+
+\renewcommand{\contentsname}{\'Indice General}
+\renewcommand{\listfigurename}{\'Indice de Figuras}
+\renewcommand{\listtablename}{\'Indice de Tablas}
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\bibname}{Bibliografía}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+%	\include{dedication}
+%	\include{Declaration/declaration}
+%	\include{Acknowledgement/acknowledgement}
+%	\include{Abstract/abstract}
+
+% *********************** Adding TOC and List of Figures ***********************
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+% \printnomenclature[space] space can be set as 2em between symbol and description
+%\printnomenclature[3em]
+
+\printnomenclature
+
+% ******************************** Main Matter *********************************
+\mainmatter
+%	\include{Abstract/abstract}
+%	\include{Chapters/chapter1}
+%	\include{Chapters/chapter2}
+%        \include{Chapters/chapter3}
+%        \include{Chapters/chapter4}
+%\include{Chapters/chapter4}
+%\include{Chapters/chapter5}
+%\include{Chapters/chapter6}
+%\include{Chapters/chapter7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{dedication}
+
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Introducción}
+\label{sec:Introducción}
+
+Este en un ejemplo de cómo citar una referencia~\parencite{MachineLearningandDeepLearning}.
+
+\textcite{MachineLearningandDeepLearning} proponen...
+
+
+\textcolor{red}{Incluir la estructura del trabajo describiendo brevemente lo que se va a desarrollar en cada capítulo.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Planteamiento del problema} 
+\label{sec:Planteamiento}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Justificación del estudio}
+\label{sec:Justificación}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hipótesis de trabajo}
+\label{sec:Hipótesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos}
+\subsection{Objetivo general}
+\label{sec:Objetivo}
+
+
+
+\subsection{Objetivos específicos}
+\label{sec:Objetivos}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estado del arte}
+\label{sec:SOTA}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Metodología}
+\label{sec:Metodología}
+
+\section{Conjunto de datos}
+\label{sec:Datos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Modelos}
+\label{sec:Modelos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Métricas de evaluación}
+\label{sec:Métricas}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Resultados}
+\label{sec:Resultados}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Discusión}
+\label{sec:Discusión}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusiones}
+\label{sec:Conclusiones}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ********************************** Back Matter *******************************
+% Backmatter should be commented out, if you are using appendices after References
+%\backmatter
+
+% ********************************** Bibliography ******************************
+%\begin{spacing}{0.9}
+	
+	% To use the conventional natbib style referencing
+	% Bibliography style previews: http://nodonn.tipido.net/bibstyle.php
+	% Reference styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
+	
+	%\bibliographystyle{apalike}
+	%\bibliographystyle{unsrt} % Use for unsorted references  
+	%	\bibliographystyle{plainnat} % use this to have URLs listed in References
+	%	\cleardoublepage
+	%	\bibliography{References} % Path to your References.bib file
+	
+	
+	% If you would like to use BibLaTeX for your references, pass `custombib' as
+	% an option in the document class. The location of 'reference.bib' should be
+	% specified in the preamble.tex file in the custombib section.
+	% Comment out the lines related to natbib above and uncomment the following line.
+	
+	%\printbibliography[heading=bibintoc, title={References}]
+	
+	
+%\end{spacing}
+
+\printbibliography[heading=bibintoc, title={Bibliogafía}]
+
+% ********************************** Appendices ********************************
+
+\begin{appendices} % Using appendices environment for more functunality
+	
+	%\include{appendix1}
+%	\include{Appendix2/appendix2}
+	
+\end{appendices}
+
+% *************************************** Index ********************************
+\printthesisindex % If index is present
+%	
+%
+
+
+
+\end{document}
