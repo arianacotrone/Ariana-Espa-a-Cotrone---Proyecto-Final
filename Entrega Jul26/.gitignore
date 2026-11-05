@@ -1,0 +1,14 @@
+# Archivos temporales que genera LaTeX al compilar
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+.DS_Store
+
+# Archivos de prueba
+_borrar/

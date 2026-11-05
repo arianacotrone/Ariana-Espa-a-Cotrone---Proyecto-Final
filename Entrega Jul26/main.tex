@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{article}
+
+% ---------- Codificación e idioma ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-noshorthands]{babel}
+
+% ---------- Formato ----------
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks,unicode]{hyperref}
+
+% Los títulos ya traen su numeración escrita ("1.1. Contexto"), así que se apaga la automática
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{3}
+\emergencystretch=3em  % evita que las URLs largas se salgan del margen
+
+% Pandoc genera \tightlist en las listas
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% ---------- Portada ----------
+\begin{titlepage}
+\centering
+\includegraphics[width=5cm]{media/image1.jpeg}\par\vspace{1.5cm}
+{\large \textbf{INSTITUTO TECNOLÓGICO DE BUENOS AIRES}\par}
+\vspace{2.5cm}
+{\LARGE \textbf{VALIDACIÓN DE ASIMETRÍA OPERATIVA EN EL SADI A TRAVÉS DE UN SEMÁFORO DE RIESGO PREDICTIVO}\par}
+\vspace{2.5cm}
+\begin{flushleft}
+\textbf{Alumno/a:} España Cotrone, Ariana (Leg. Nº 106331)\par
+\textbf{Profesor/a:} Mon, Alicia Laura\par
+\textbf{Taller:} Trabajo Final Integrador -- Especialización en Ciencia de Datos\par
+\end{flushleft}
+\vfill
+BUENOS AIRES\par
+PRIMER CUATRIMESTRE, 2026\par
+\end{titlepage}
+
+% ---------- Índice automático ----------
+\tableofcontents
+\newpage
+
+% ---------- Contenido ----------
+\input{cuerpo.tex}
+
+\end{document}
